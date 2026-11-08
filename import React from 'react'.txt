@@ -1,0 +1,54 @@
+import React from 'react'
+import Card from './Component/Card'
+
+const App = () => {
+// const name="chethan"
+// const contact=1234567890
+// const email='ccc@gmail.com'
+// const address="honnali"
+
+let me={
+  name:"chethan",
+  contact:1234567890,
+  email:"chethan@gmail.com",
+  address:"Honnali"
+}
+
+  return (
+    <div>
+      <div className="app-conatiner">
+        {/* <Card fn={name} c={contact} e={email} ad={address}/> */}
+        <Card data={me}/>
+      </div>
+    </div>
+  )
+}
+
+export default App
+
+
+
+
+import React from 'react'
+import "./Card.css"
+const Card = (props) => {
+    // let {fn,c,e,ad}=props
+
+    let {name,contact,email,address}=props.data
+  return (
+    <div>
+      <div className="card-component">
+        <div className="cards">
+            <div className="card">
+                <p>name:{name}</p>
+                <p>contact:{contact}</p>
+                <p>email:{email}</p>
+                <p>address:{address}</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Card
